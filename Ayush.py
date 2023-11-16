@@ -57,7 +57,7 @@ options = """
            "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m")
 
 
-class x444:
+class x44:
     def __init__(self):
         self.proxy = "http://" + next(__proxies__) if __config__["proxy"] == True else None
         self.session = httpx.Client(proxies=self.proxy)
