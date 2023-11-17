@@ -252,7 +252,7 @@ class Ayush:
     def menu(self):
         os.system(f"cls & title Ayush Nuker ^| Authenticated as: {__client__.user.name}#{__client__.user.discriminator}")
         print(Ayush_art + options + "\n")
-        ans = input("{}({}x444{}) Option{}:{} ".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m")) 
+        ans = input("{}({}Ayush{}) Option{}:{} ".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m")) 
         
         if ans in ["1", "01"]:
             scrape = input("{}({}Ayush{}) Fetch IDs [Y/N]{}:{} ".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m"))
