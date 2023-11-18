@@ -12,7 +12,7 @@ __proxies__, __client__, __config__, __threads__= cycle(open("proxies.txt", "r")
 token = __config__["token"]
 os.system("cls") if os.name == "nt" else os.system("clear")
 
-Ayush_art = """
+Aditya_art = """
                                      {}_                   _
                                     {}/ \  _   _ _   _ ___| |__
                                    {}/   \| | | | | | / __| '_ \
@@ -38,7 +38,7 @@ options = """
            "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m")
 
 
-class Ayush:
+class Aditya:
     def __init__(self):
         self.proxy = "http://" + next(__proxies__) if __config__["proxy"] == True else None
         self.session = httpx.Client(proxies=self.proxy)
@@ -251,11 +251,11 @@ class Ayush:
     
     def menu(self):
         os.system(f"cls & title Ayush Nuker ^| Authenticated as: {__client__.user.name}#{__client__.user.discriminator}")
-        print(Ayush_art + options + "\n")
-        ans = input("{}({}Ayush{}) Option{}:{} ".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m")) 
+        print(Aditya_art + options + "\n")
+        ans = input("{}({}Aditya{}) Option{}:{} ".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m")) 
         
         if ans in ["1", "01"]:
-            scrape = input("{}({}Ayush{}) Fetch IDs [Y/N]{}:{} ".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m"))
+            scrape = input("{}({}Aditya{}) Fetch IDs [Y/N]{}:{} ".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m"))
             if scrape.lower() == "y":
                 try:
                     guild = __client__.get_guild(int(guildid))
@@ -274,7 +274,7 @@ class Ayush:
                     t.join()
                     
             time.sleep(3)
-            print("{}({}Ayush{}) Banned {}/{}".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", len(self.banned), len(members)))
+            print("{}({}Aditya{}) Banned {}/{}".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", len(self.banned), len(members)))
             time.sleep(1.5)
             self.menu()
             
@@ -288,20 +288,20 @@ class Ayush:
                     t.join()
             
             time.sleep(3)
-            print("{}({}Ayush{}) Kicked {}/{}".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", len(self.kicked), len(members)))
+            print("{}({}Aditya{}) Kicked {}/{}".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", len(self.kicked), len(members)))
             time.sleep(1.5)
             self.menu()
             
         elif ans in ["3", "03"]:
-            days = int(input("{}({}Ayush{}) Days{}:{} ".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m")))
+            days = int(input("{}({}Aditya{}) Days{}:{} ".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m")))
             self.execute_prune(guildid, days, token)
             time.sleep(1.5)
             self.menu()
             
         elif ans in ["4", "04"]:
-            type = input("{}({}Ayush{}) Channels Type ['t', 'v']{}:{} ".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m"))
+            type = input("{}({}Aditya{}) Channels Type ['t', 'v']{}:{} ".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m"))
             type = 2 if type == "v" else 0
-            amount = int(input("{}({}Ayush{}) Amount{}:{} ".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m")))
+            amount = int(input("{}({}Aditya{}) Amount{}:{} ".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m")))
             self.channels.clear()
             for i in range(amount):
                 t = threading.Thread(target=self.execute_crechannels, args=(guildid, random.choice(__config__["nuke"]["channels_name"]), type, token))
@@ -310,12 +310,12 @@ class Ayush:
                     t.join()
                 
             time.sleep(3)
-            print("{}({}Ayush{}) Created {}/{} channels".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", len(self.channels), amount))
+            print("{}({}Aditya{}) Created {}/{} channels".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", len(self.channels), amount))
             time.sleep(1.5)
             self.menu()
             
         elif ans in ["5", "05"]:
-            amount = int(input("{}({}Ayush{}) Amount{}:{} ".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m")))
+            amount = int(input("{}({}Aditya{}) Amount{}:{} ".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m")))
             self.roles.clear()
             for i in range(amount):
                 t = threading.Thread(target=self.execute_creroles, args=(guildid, random.choice(__config__["nuke"]["roles_name"]), token))
@@ -324,7 +324,7 @@ class Ayush:
                     t.join()
                 
             time.sleep(3)
-            print("{}({}Ayush{}) Created {}/{} roles".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", len(self.roles), amount))
+            print("{}({}Aditya{}) Created {}/{} roles".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", len(self.roles), amount))
             time.sleep(1.5)
             self.menu()
             
@@ -338,7 +338,7 @@ class Ayush:
                     t.join()
                 
             time.sleep(3)
-            print("{}({}Ayush{}) Deleted {}/{} channels".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", len(self.channels), len(channels)))
+            print("{}({}Aditya{}) Deleted {}/{} channels".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", len(self.channels), len(channels)))
             time.sleep(1.5)
             self.menu()
             
@@ -352,7 +352,7 @@ class Ayush:
                     t.join()
                 
             time.sleep(3)
-            print("{}({}Ayush{}) Deleted {}/{} roles".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", len(self.roles), len(roles)))
+            print("{}({}Aditya{}) Deleted {}/{} roles".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", len(self.roles), len(roles)))
             time.sleep(1.5)
             self.menu()
             
@@ -366,13 +366,13 @@ class Ayush:
                     t.join()
                     
             time.sleep(3)
-            print("{}({}Ayush{}) Deleted {}/{} emojis".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", len(self.emojis), len(emojis)))
+            print("{}({}Aditya{}) Deleted {}/{} emojis".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", len(self.emojis), len(emojis)))
             time.sleep(1.5)
             self.menu()
             
         elif ans in ["9", "09"]:
             self.messages.clear(); self.channels.clear()
-            amount = int(input("{}({}Ayush{}) Amount{}:{} ".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m")))
+            amount = int(input("{}({}Aditya{}) Amount{}:{} ".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m")))
             channels = self.session.get(f"https://discord.com/api/v9/guilds/{guildid}/channels", headers={"Authorization": f"Bot {token}"}).json()
             for channel in channels: self.channels.append(channel['id'])
             channelz = cycle(self.channels)
@@ -383,7 +383,7 @@ class Ayush:
                     t.join()
                     
             time.sleep(3)
-            print("{}({}Ayush{}) Spammed {}/{} messages".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", len(self.messages), amount))
+            print("{}({}Aditya{}) Spammed {}/{} messages".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", len(self.messages), amount))
             time.sleep(1.5)
             self.menu()
             
@@ -392,38 +392,38 @@ class Ayush:
                 response = self.session.get("https://github.com/notspeezy/x444-Nuker/releases/latest")
                 check_version = response.headers.get('location').split('/')[7].split('v')[1]
                 if VERSION != check_version:
-                    print("{}({}Ayush{}) You're using an outdated version!".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m"))
+                    print("{}({}Aditya{}) You're using an outdated version!".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m"))
                     webbrowser.open(f"https://github.com/notspeezy/x444-Nuker/releases/tag/{check_version}")
                 else:
-                    print("{}({}Ayush{}) You're using the current version!".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m"))
+                    print("{}({}Aditya{}) You're using the current version!".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m"))
             except:
-                print("{}({}Ayush{}) Couldn't reach the releases!".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m"))
+                print("{}({}Aditya{}) Couldn't reach the releases!".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m"))
             
             time.sleep(1.5)
             self.menu()
     
         
         elif ans == "11":
-            print("- Ayush Nuker is a nuker on python , dm me if you have any problem in discord : 4yu5h.exe or join sp1it : discord.gg/sp1it")
+            print("- Aditya Nuker is a nuker on python , dm me if you have any problem in discord : 4yu5h.exe or join sp1it : discord.gg/sp1it")
             input("")
             self.menu()
         
         elif ans == "12":
-            print("{}({}Ayush{}) Thanks for using Ayush!".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m"))
+            print("{}({}Aditya{}) Thanks for using Aditya!".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m"))
             time.sleep(1.5)
             os._exit(0)
             
     
 @__client__.event
 async def on_ready():
-    print("{}({}Ayush{}) Authenticated as{}: {}{}".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", f"{__client__.user.name}#{__client__.user.discriminator}"))
+    print("{}({}Aditya{}) Authenticated as{}: {}{}".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", f"{__client__.user.name}#{__client__.user.discriminator}"))
     time.sleep(1.5)
     Ayush().menu()
     
 
 if __name__ == "__main__":
     try:
-        os.system("title Ayush Nuker ^| Authentication & mode con: cols=95 lines=25")
+        os.system("title Aditya Nuker ^| Authentication & mode con: cols=95 lines=25")
         guildid = input("{}({}Ayush{}) Guild ID{}:{} ".format("\x1b[0m", "\x1b[38;5;21m", "\x1b[0m", "\x1b[38;5;21m", "\x1b[0m"))
         __client__.run(token, bot=True)
     except Exception as e:
